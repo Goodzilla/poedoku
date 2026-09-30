@@ -159,3 +159,4 @@ npm run fetch:gems
 - **Do Not Break Seed Determinism**: Do not alter `hashString` or `createPrng` without a migration strategy, as this would alter the daily grid for existing dates.
 - **Maintain English Localization**: All user-facing strings, code comments, and documentation must remain in English.
 - **Single-Use Constraint**: Never allow a player to submit a gem ID that already appears in `gameState.usedGemIds`.
+- **Zero Spoilers in Search**: Never display gem tags, damage types, or attributes in the autocomplete list in `SearchModal.tsx`. The player must rely purely on their PoE knowledge.

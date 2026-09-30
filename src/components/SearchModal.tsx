@@ -144,25 +144,20 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                       </div>
                     )}
 
-                    <div className="truncate">
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-sm text-neutral-200 truncate">
-                          {gem.name}
+                    <div className="truncate flex items-center gap-2">
+                      <span className="font-semibold text-sm text-neutral-200 truncate">
+                        {gem.name}
+                      </span>
+                      {gem.isVaal && (
+                        <span className="px-1.5 py-0.2 text-[10px] uppercase font-bold rounded bg-rose-950/60 text-rose-300 border border-rose-800/40">
+                          Vaal
                         </span>
-                        {gem.isVaal && (
-                          <span className="px-1.5 py-0.2 text-[10px] uppercase font-bold rounded bg-rose-950/60 text-rose-300 border border-rose-800/40">
-                            Vaal
-                          </span>
-                        )}
-                        {gem.isTransfigured && (
-                          <span className="px-1.5 py-0.2 text-[10px] uppercase font-bold rounded bg-amber-950/60 text-amber-300 border border-amber-800/40">
-                            Trans
-                          </span>
-                        )}
-                      </div>
-                      <div className="text-xs text-neutral-400 truncate">
-                        {gem.tags.slice(0, 4).join(', ')}
-                      </div>
+                      )}
+                      {gem.isTransfigured && (
+                        <span className="px-1.5 py-0.2 text-[10px] uppercase font-bold rounded bg-amber-950/60 text-amber-300 border border-amber-800/40">
+                          Transfigured
+                        </span>
+                      )}
                     </div>
                   </div>
 
