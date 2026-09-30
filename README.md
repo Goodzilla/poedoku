@@ -1,81 +1,63 @@
-# PoEDoku ⚔️
+# PoEDoku
 
-A daily grid puzzle game built for **Path of Exile 1** enthusiasts, inspired by PokéDoku and Immaculate Grid.
+A daily 3x3 grid trivia game based on Path of Exile 1 active skill gems, inspired by PokéDoku and Immaculate Grid.
 
-![PoEDoku Preview](https://raw.githubusercontent.com/placeholder/preview.png)
+## Rules
 
-## 🎮 How to Play
+- Complete the 3x3 grid by selecting an active skill gem for each cell.
+- Each selected gem must satisfy both the row criterion and the column criterion.
+- You have exactly 9 guesses for the 9 cells. Every guess counts.
+- Each skill gem can only be used once per puzzle.
+- A new puzzle is generated daily at 00:00 UTC and is identical for all players.
 
-1. **Fill the 3x3 Grid**: Select a Path of Exile 1 active skill gem for each cell.
-2. **Match Tags**: The selected gem must satisfy both the **Row criterion** and the **Column criterion**.
-3. **9 Guesses**: You have exactly 9 attempts to solve all 9 cells. Every guess counts!
-4. **No Duplicates**: Each gem can only be used once per puzzle.
-5. **Daily Sync**: A new puzzle is automatically generated every day at **00:00 UTC** and is identical for players worldwide.
-6. **Share**: Copy your daily emoji grid (`🟩 / 🟥`) and share your score with friends!
+## Tech Stack
 
----
+- React 18, TypeScript, Vite
+- Tailwind CSS
+- Data sourced from the PoE Community Wiki Cargo API
 
-## 🛠️ Tech Stack
+## Getting Started
 
-- **Framework**: [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- **Bundler**: [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Icons**: [Lucide Icons](https://lucide.dev/)
-- **Effects**: Canvas Confetti
-- **Deployment**: [Vercel](https://vercel.com/) (100% Static SPA)
+### Prerequisites
 
----
+Node.js (v18+) and npm.
 
-## 🚀 Quick Start
+### Installation
 
-### 1. Install dependencies
 ```bash
 npm install
 ```
 
-### 2. Start the development server
+### Development
+
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+### Production Build
 
-### 3. Update Gem Data (Optional)
-To fetch and update the full skill gem database from the PoE Community Wiki:
+```bash
+npm run build
+npm run preview
+```
+
+### Update Gem Database
+
+To re-fetch all active skill gems from the PoE Community Wiki:
+
 ```bash
 npm run fetch:gems
 ```
 
-### 4. Build for Production
-```bash
-npm run build
-```
+## Deployment
 
----
+The project is a static single-page application (SPA).
 
-## 🌐 Deploy to Vercel
+To deploy on Vercel:
+1. Import this repository into Vercel.
+2. Select the **Vite** preset (default build command: `npm run build`, output directory: `dist`).
+3. Deploy.
 
-1. Create a repository on GitHub and push the code:
-   ```bash
-   git init -b main
-   git add .
-   git commit -m "feat: initial release"
-   git remote add origin https://github.com/<your-username>/poedoku.git
-   git push -u origin main
-   ```
-2. Go to [Vercel](https://vercel.com) and click **"Add New Project"**.
-3. Import your `poedoku` repository.
-4. Leave settings as default (Framework Preset: **Vite**).
-5. Click **Deploy**.
+## License & Credits
 
----
-
-## 🤖 AI Agents & Architecture Documentation
-
-For complete technical specifications, architecture diagrams, data models, and coding conventions, refer to [AGENTS.md](AGENTS.md).
-
----
-
-## ⚖️ License & Disclaimer
-
-PoEDoku is an open-source, fan-created project. Path of Exile is a registered trademark of [Grinding Gear Games](https://www.grindinggear.com/). Skill gem data and art assets are property of Grinding Gear Games.
+PoEDoku is an open-source fan project. Path of Exile and all related assets are trademarks or registered trademarks of Grinding Gear Games.
